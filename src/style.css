@@ -1,5 +1,5 @@
 h1 {
-  color: #d3a3a3;
+  color: #9c9c9c;
   font-size: 15px;
   font-weight: 900px;
   line-height: 28.8px;
@@ -15,19 +15,58 @@ li {
   list-style: none;
   margin: 0px;
   padding: 0px;
-  color: #e20303;
+  color: #5a5a5a;
   font-size: 14px;
   font-weight: 400px;
   line-height: 19px;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: 30px auto;
 }
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #000000;
+  border: 1px solid #b9b9b9;
   border-radius: 10px;
+}
+
+.overview {
+  margin-bottom: 40px;
+}
+
+.col-sm-5 {
+  padding-left: 20px;
+}
+
+.open-source {
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 200px;
+}
+
+.weather-icon-big {
+  padding: 0px;
+}
+.temp {
+  color: rgb(63, 63, 63);
+  font-size: 64px;
+  font-weight: 400px;
+  padding-top: 100px;
+  line-height: 1px;
+  margin: 5px;
+}
+
+.units {
+  color: rgb(63, 63, 63);
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 1px;
+  top: -32px;
+}
+
+.temp,
+.units {
+  position: relative;
 }
