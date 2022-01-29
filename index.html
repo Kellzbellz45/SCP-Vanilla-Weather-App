@@ -11,16 +11,19 @@
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
       crossorigin="anonymous"
     />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Vanilla Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <div class="overview">
-          <h1>Toronto</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Monday 5:00pm</li>
-            <li>Cloudy</li>
+            <li id="description"></li>
           </ul>
         </div>
 
@@ -32,14 +35,13 @@
               alt="rain"
               width="100px"
             />
-            <strong class="temp">12</strong>
+            <strong id="temp"></strong>
             <span class="units">°C | <a href="# ">°F</a></span>
           </div>
           <div class="col-sm-5">
             <ul>
-              <li>Precipitation: 97%</li>
-              <li>Humidity: 85%</li>
-              <li>Wind: 13 km/h</li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> Km/H</li>
             </ul>
           </div>
         </div>

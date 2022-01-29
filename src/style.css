@@ -19,6 +19,7 @@ li {
   font-size: 14px;
   font-weight: 400px;
   line-height: 19px;
+  text-transform: capitalize;
 }
 
 .container {
@@ -49,11 +50,11 @@ li {
 .weather-icon-big {
   padding: 0px;
 }
-.temp {
+#temp {
   color: rgb(63, 63, 63);
   font-size: 64px;
   font-weight: 400px;
-  padding-top: 100px;
+  padding-top: 120px;
   line-height: 1px;
   margin: 5px;
 }
@@ -66,7 +67,7 @@ li {
   top: -32px;
 }
 
-.temp,
+#temp,
 .units {
   position: relative;
 }
