@@ -1,11 +1,14 @@
-function formateDate(timestamp) {
-  // Calculate the date
+function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
-  let minutes = date.getMinutes();
-  if (minites < 10) {
-    minutes = `0${minutes}()`;
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
   let days = [
     "Sunday",
     "Monday",
@@ -15,8 +18,7 @@ function formateDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let day = date.getDay();
-
+  let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
@@ -38,12 +40,20 @@ function displayTemperature(response) {
 
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+let city = "Lisbon";
 
 let apiKey = "9b4aa1e9d9995bf996aaf55cc902b1e5";
 
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
-
-//-----Time/Day------//
