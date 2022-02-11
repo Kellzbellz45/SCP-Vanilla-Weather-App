@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Raleway:wght@400;700&family=Roboto+Slab&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -16,7 +24,7 @@
 
     <title>Vanilla Weather App</title>
   </head>
-  <body>
+  <body class="document">
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
@@ -25,7 +33,7 @@
               <div class="col-sm-6">
                 <input
                   type="search"
-                  placeholder="Enter a City"
+                  placeholder="🔍  Enter a City"
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -35,11 +43,13 @@
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-primary w-100"
+                  class="btn"
                 />
               </div>
             </div>
           </form>
+            <div class="card" id="card-2" style="width: 54rem;">
+                <div class="card-body-2">
 
           <div class="overview">
             <h1 id="city"></h1>
@@ -70,8 +80,87 @@
               </ul>
             </div>
           </div>
+      </div>
+  </div>
+          <div class="weather-forecast">
+            <div class="row">
+              <div class="weather-forecast-date">
+          <div class="row">
+            <div class="col-md-2">
+              <h3 class="mon">Mon</h3>
+              <img src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Forecast"
+                  id = "Mon-image"
+                  width="140"/>
+                 <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+              <h3 class="tues">Tues</h3>
+              <img src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Forecast"
+                  id = "tues-image"
+                  width="140"/>
+                  <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                 
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+              <h3 class="wed">Wed</h3>
+               <img src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Forecast"
+                  id = "wednesday-image"
+                  width="140"/>
+                  <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                 
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+              <h3 class="thurs">Thurs</h3>
+              <img src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Forecast"
+                  id = "thursday-image"
+                  width="148"/>
+                  <div class="thursday-forecast">
+                  <span class="weather-max-thurs">18°</span>
+                
+                </div>
+            </div>
+
+            <div class="col-md-2">
+              <h3 class="fri">Fri</h3>
+               <img src="http://openweathermap.org/img/wn/01d@2x.png"
+                  alt="Forecast"
+                  id = "friday-image"
+                  width="140"/>
+                  <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                
+                </div>
+              </div>
+              </div>
+             </div>
+           </div>
+            <div>
+              <br>
+               <h4 class="today-tip">
+               Today's Tip: Leave the sweater at home! 🥵
+               </h4>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>  
+</div>
       <small>
         <a
           href="https://github.com/Kellzbellz45/SCP-Vanilla-Weather-App/find/main"
