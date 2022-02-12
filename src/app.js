@@ -127,4 +127,12 @@ function getForecast(coordinates) {
 function todaysTip(response) {
   let tip = document.querySelector("#tip");
   tip.innerHTML = temperatureElement;
-}
+
+if (temperatureElement < 20) 
+alert("Today's Tip: Leave the sweater at home! 🥵");
+
+} else {
+  alert("Today's Tip: Make sure to bring your Jacket! 🥶 ")}; 
+
+
+
