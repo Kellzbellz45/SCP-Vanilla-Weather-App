@@ -81,67 +81,22 @@ li {
 
 .weather-forecast {
   margin-top: 20px;
+  color: #000;
   text-align: center;
-}
-
-.weather-forecast-date {
-  text-transform: capitalize;
-  padding-top: 0px;
-  padding-left: 30;
-  font-size: 20px;
-  color: #137067;
-
-  font-family: "Cabin", sans-serif;
-  font-family: "Raleway", sans-serif;
-  font-family: "Roboto", sans-serif;
-  font-family: "Roboto Slab", serif;
-  font-weight: 700px;
-}
-
-.mon,
-.tues,
-.wed {
-  font-size: 24px;
-  color: #137067;
-  padding-left: 70px;
-}
-
-.thurs {
-  font-size: 24px;
-  color: #137067;
-  padding-left: 62px;
-}
-
-.fri {
-  font-size: 24px;
-  color: #137067;
-  padding-left: 75px;
-}
-
-#Mon-image,
-#tues-image,
-#wednesday-image,
-#friday-image {
-  font-size: 24px;
-  color: #137067;
-  padding-left: 55px;
-}
-
-#thursday-image {
-  font-size: 24px;
-  color: #137067;
-  padding-left: 60px;
-}
-.weather-forecast-temperature-max {
-  font-size: 24px;
-  color: #717c7b;
   padding-left: 85px;
 }
 
-.thursday-forecast {
-  font-size: 24px;
-  color: #717c7b;
-  padding-left: 93px;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
 
 .btn {
