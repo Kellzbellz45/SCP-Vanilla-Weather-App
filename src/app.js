@@ -38,7 +38,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
@@ -49,7 +49,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="60"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -66,7 +66,6 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function displayTemperature(response) {
@@ -119,50 +118,13 @@ form.addEventListener("submit", Submit);
 
 search("Toronto");
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temp");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-let celsiusTemperature = null;
-
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "9b4aa1e9d9995bf996aaf55cc902b1e5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
-//-----Todays Tip - WIP
-function todaysTip() {
-  let temp = document.querySelector("#tip");
-
-  if (temp < 12) {
-    alert("Good Morning!☀️");
-  } else {
-    if (temp < 18) {
-      alert("Good Afternoon!😎");
-    } else {
-      alert("Good Evening🌙");
-    }
-  }
+function todaysTip(response) {
+  let tip = document.querySelector("#tip");
+  tip.innerHTML = temperatureElement;
 }
-//-------

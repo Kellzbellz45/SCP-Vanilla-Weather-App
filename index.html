@@ -50,14 +50,15 @@
           </form>
             <div class="card" id="card-2" style="width: 54rem;">
                 <div class="card-body-2">
+                  <div class="overview">
+                    <h1 id="city"></h1>
+                      <ul>
+                        <li id="date"></li>
+                        <li id="description"></li>
+                      </ul>
+                        </div>
+                    </div>
 
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li id="date"></li>
-              <li id="description"></li>
-            </ul>
-          </div>
 
           <div class="row">
             <div class="col-sm-6">
@@ -68,9 +69,7 @@
                 alt="alt"
               />
               <strong id="temp"></strong>
-              <span class="units"
-                ><a href="# " id="celsius-link" class="active">°C</a> |
-                <a href="# " id="fahrenheit-link">°F</a></span
+              <span class="units">°C</span
               >
             </div>
             <div class="col-sm-5">
@@ -85,7 +84,7 @@
          <div class="weather-forecast" id="forecast"></div>
           <div class="row">
             <div class="col-2">
-               
+              
                 </div>
               </div>
             </div>
@@ -93,7 +92,7 @@
         </div>
          
               <br>
-               <h4 class="today-tip">
+               <h4 class="today-tip" id = "tip">
                Today's Tip: Leave the sweater at home! 🥵
                </h4>
             </div>

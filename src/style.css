@@ -29,7 +29,8 @@ li {
 
 .container {
   max-width: 650px;
-  margin: 30px auto;
+  margin-top: 90px;
+  margin-bottom: 20px;
   border-radius: 20px;
   background-color: white;
   filter: drop-shadow(0 0 0.4rem #8a9490);
@@ -80,21 +81,34 @@ li {
 
 .weather-forecast {
   margin-top: 30px;
-  color: #000;
+  margin-bottom: 20px;
   text-align: center;
+  padding-left: 95px;
+  color: #22978c;
+  font-weight: 500px;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.5;
+  font-size: 18px;
+  color: #22978c;
+  font-weight: 500px;
+  font-size: 20px;
+  font-family: "Cabin", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+  font-size: 14px;
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .btn {
@@ -137,12 +151,11 @@ li {
   font-size: 18px;
   text-align: center;
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   color: #22978c;
 
   font-family: "Cabin", sans-serif;
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
-  font-family: "Roboto Slab", serif;
   font-weight: 400px;
 }
