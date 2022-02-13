@@ -97,6 +97,8 @@ function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
+
+  todaysTip(celsiusTemperature);
 }
 
 function search(city) {
@@ -124,15 +126,12 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function todaysTip(response) {
+function todaysTip(temperature) {
   let tip = document.querySelector("#tip");
-  tip.innerHTML = temperatureElement;
 
-if (temperatureElement < 20) 
-alert("Today's Tip: Leave the sweater at home! 🥵");
-
-} else {
-  alert("Today's Tip: Make sure to bring your Jacket! 🥶 ")}; 
-
-
-
+  if (temperature > 20) {
+    tip.innerHTML = "Today's Tip: Leave the sweater at home! 🥵";
+  } else {
+    tip.innerHTML = "Today's Tip: Make sure to bring your Jacket! 🥶 ";
+  }
+}
